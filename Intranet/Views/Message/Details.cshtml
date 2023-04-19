@@ -1,0 +1,54 @@
+﻿@model Intranet.Models.DtoModels.MessageContactFormDto
+
+@{
+    ViewData["Title"] = "Moja strona -> Wiadomości -> " + @Model.Message.Field4;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="pb-0">
+    <div class="container-fluid">
+        <div class="card mb-0">
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayFor(model => model.ContactForm.Field1Label)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.Field1)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayFor(model => model.ContactForm.Field2Label)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.Field2)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayFor(model => model.ContactForm.Field3Label)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.Field3)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayFor(model => model.ContactForm.Field4Label)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.Field4)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayFor(model => model.ContactForm.Field5Label)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.Field5)
+                    </dd>
+                    <dt class="col-sm-2">
+                        Data otrzymania
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Message.CreationDate)
+                    </dd>
+                </dl>
+                    <a class="btn btn-primary" asp-action="Index">Wróć</a>
+            </div>
+        </div>
+    </div>
+</section>

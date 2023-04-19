@@ -1,0 +1,304 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #f57c00 !important;
+}
+
+    nav ul a,
+    nav .brand-logo {
+        color: #FFFFFF !important;
+        text-transform: uppercase;
+        background-color: #f57c00;
+    }
+
+    nav i,
+    nav [class^="mdi-"], nav [class*="mdi-"],
+    nav i.material-icons {
+        display: block;
+        font-size: 40px !important;
+        height: 56px;
+        line-height: 56px;
+        color: #ffffff;
+        opacity: 0.7;
+    }
+
+#main-text {
+    line-height: 1.2;
+    font-weight: 300;
+    text-shadow: #000000 1px 0 200px;
+    text-transform: none;
+}
+
+#main-text-company {
+    color: #f57c00;
+    font-weight: bold;
+    font-size: 100px;
+    text-shadow: #000000 1px 0 200px;
+    margin-top: 75px;
+    text-transform: uppercase;
+}
+
+#main-title-text-other-page {
+    color: #f57c00;
+    font-weight: bold;
+    font-size: 100px;
+    text-shadow: #000000 1px 0 200px;
+    margin-top: 175px;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 2rem;
+}
+
+#nav-mobile {
+    background-color: #f57c00 !important;
+}
+
+.sidenav-trigger {
+    color: #FFFFFF;
+    background-color: #f57c00;
+}
+
+.parallax-container {
+    min-height: 580px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255,255,255,.9);
+}
+
+    .parallax-container .section {
+        width: 100%;
+    }
+
+@media only screen and (max-width : 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+    .icon-block .material-icons {
+        font-size: inherit;
+    }
+
+#btn-blog {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #f57c00;
+    border: #f57c00 1px solid;
+    font-weight: 500;
+}
+
+#btn-add-cart {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #f57c00;
+    border: #f57c00 1px solid;
+    font-weight: 500;
+    display: flex;
+    width: 200px;
+}
+
+.btn-main-page {
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+#main_page_contact_form input, textarea, label {
+    color: #FFFFFF;
+}
+
+#main_page_contact_form input, textarea, label {
+    color: #FFFFFF;
+}
+
+    input:not([type]):focus:not([readonly]) + label,
+    input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+    input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+    textarea.materialize-textarea:focus:not([readonly]) + label {
+        color: #f57c00 !important;
+        font-weight: bold;
+    }
+
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:not(.browser-default):focus:not([readonly]),
+    input[type=password]:not(.browser-default):focus:not([readonly]),
+    input[type=email]:not(.browser-default):focus:not([readonly]),
+    input[type=url]:not(.browser-default):focus:not([readonly]),
+    input[type=time]:not(.browser-default):focus:not([readonly]),
+    input[type=date]:not(.browser-default):focus:not([readonly]),
+    input[type=datetime]:not(.browser-default):focus:not([readonly]),
+    input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+    input[type=tel]:not(.browser-default):focus:not([readonly]),
+    input[type=number]:not(.browser-default):focus:not([readonly]),
+    input[type=search]:not(.browser-default):focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid #f57c00 !important;
+        -webkit-box-shadow: 0 1px 0 0 #f57c00 !important;
+        box-shadow: 0 1px 0 0 #f57c00 !important;
+    }
+
+#left-container-background {
+    background-image: url('~\lib\img\main\background5.jpg');
+}
+
+.count-number {
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.count-text {
+    line-height: 1.2;
+    font-weight: 300;
+    text-shadow: #000000 1px 0 200px;
+}
+
+.count-text-title-second-line {
+    text-transform: uppercase;
+}
+
+.count-text-title-first-line {
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.material-icons {
+    font-size: 70px;
+}
+
+.card-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-title {
+    margin: 0px !important;
+}
+
+.shop-picture {
+    max-width: 200px;
+    object-fit: cover;
+}
+
+.shop-item {
+    border: none !important;
+    color: #000000 !important;
+    height: 350px;
+}
+
+.blog-details-header img {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+footer li {
+    margin-bottom:7px;
+    display:flex;
+}
+
+footer .material-icons {
+    font-size: 20px;
+    margin-right:10px;
+}
+
+footer h5 {
+    text-transform: uppercase;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer a:hover {
+    color: blue;
+}
+
+footer .row {
+    margin:0;
+}
+
+h3 {
+    text-transform:uppercase;
+}
+
+#h4-about-us {
+    text-transform: uppercase;
+}
+
+.carousel.carousel-slider {
+    margin-top: 2px;
+    height: 400px !important;
+    object-fit: cover;
+}
+
+.carousel .carousel-item > img {
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #f57c00 !important;
+    opacity: 1;
+}
+
+.carousel .indicators .indicator-item {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 15px !important;
+    width: 15px !important;
+    margin: 24px 4px;
+    background-color: #f57c00 !important;
+    opacity: 0.6;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    border-radius: 50%;
+}
+
+#shop-bread-crumbs, #shop-bread-crumbs a {
+    color: grey;
+}
+
+#shop-bread-crumbs a:hover {
+    color: #f57c00;
+}
+
+ul.punkt {
+    list-style: disc outside;
+}

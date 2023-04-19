@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Strona główna";
+}
+<div class="container">
+    <!--   Blog Section   -->
+    <div class="section">
+        @await Html.PartialAsync("Partial/_BlogSection", (Portal.Models.DtoModels.BlogSectionDto)ViewBag.BlogSection)
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper counter-section">
+    <!--   Counter Section   -->
+    @await Html.PartialAsync("Partial/_CounterSection", (Portal.Models.DtoModels.ParametersDto)ViewBag.Parameters)
+    <div class="parallax"><img src="~/lib/img/main/background6.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <!--   About Us Section   -->
+    @await Html.PartialAsync("Partial/_AboutUsSection", (Portal.Models.DtoModels.ParametersDto)ViewBag.Parameters)
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="row center">
+            <div class="col s12">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h3>FOTORELACJE</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+            <div class="col l4 m6 s12">
+                <img class="card responsive-img materialboxed" src="~/lib/img/main/background1.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div id="contact" class="section no-pad-bot">
+        @await Component.InvokeAsync("ContactFormComponent")
+    </div>
+    <div class="parallax"><img src="~/lib/img/main/background2blur.jpg" alt="Unsplashed background img 3"></div>
+</div>

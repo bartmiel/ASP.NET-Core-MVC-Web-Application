@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Data.Data.Portal.Message>
+
+<li class="nav-item dropdown">
+    <a class="nav-link text-white" id="messages" rel="nofollow" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-envelope"></i>
+        <span class="badge bg-orange badge-corner fw-normal"> @Model.Count() </span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="messages">
+        @foreach(var item in Model)
+        {
+        <li>
+            <a class="dropdown-item d-flex py-3" asp-controller="Message" asp-action="Details" asp-route-id="@item.Id">
+                <img class="img-fluid rounded-circle" src="~/lib/img/avatar-no-name.jpg" width="45">
+                <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-sm text-gray-600">@item.Field3</span><small class="small text-gray-600"> @item.Field4</small></div>
+            </a>
+        </li>
+        }
+        <li><a class="dropdown-item text-center" asp-controller="Message" asp-action="Index"> <strong class="text-xs text-gray-600">Zobacz wszystkie wiadomości   </strong></a></li>
+    </ul>
+</li>

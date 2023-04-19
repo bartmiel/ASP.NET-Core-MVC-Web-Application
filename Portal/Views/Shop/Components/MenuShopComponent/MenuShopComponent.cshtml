@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Data.Data.Shop.Cattegory>
+
+<nav role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" asp-controller="Home" asp-action="Index" class="brand-logo"><i class="material-icons large">access_alarms</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Strona główna</a>
+            </li>
+            @foreach (var item in Model)
+            {
+                <li>
+                    @Html.ActionLink(item.Name, "Index", "Shop", new{id=item.Id}, null)
+                </li>
+            }
+            <li>
+                <a asp-area="" asp-controller="Cart" asp-action="Index">Koszyk</a>
+            </li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+            <li>
+                <a asp-controller="Home" asp-action="Index">Strona główna</a>
+            </li>
+            @foreach (var item in Model)
+            {
+                <li>
+                    @Html.ActionLink(item.Name, "Index", "Shop", new{id=item.Id}, null)
+                </li>
+            }
+            <li>
+                <a asp-area="" asp-controller="Cart" asp-action="Index">Koszyk</a>
+            </li>
+        </ul>
+        <a data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>

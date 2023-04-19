@@ -1,0 +1,85 @@
+﻿@model Intranet.Models.DtoModels.MessagesContactFormDto
+
+@{
+    ViewData["Title"] = "Moja strona -> Wiadomości";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="pb-0">
+    <div class="container-fluid">
+        <div class="card mb-0">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th scope="col">
+                                @Html.DisplayFor(model => model.ContactForm.Field1Label)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayFor(model => model.ContactForm.Field2Label)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayFor(model => model.ContactForm.Field3Label)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayFor(model => model.ContactForm.Field4Label)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayFor(model => model.ContactForm.Field5Label)
+                            </th>
+                            <th scope="col">
+                                Data otrzymania
+                            </th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Messages)
+                        {
+                            <tr>
+                                <input type="hidden" asp-for="@item.Id" />
+                                <td>
+                                    @if(item.IsNew)
+                                    {
+                                        <i class="bi bi-envelope-fill"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-envelope-open-fill"></i>
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Field1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Field2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Field3)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Field4)
+                                </td>
+                                <td>
+                                    @String.Concat(@item.Field5.Substring(0,item.Field5.Length<20 ? item.Field5.Length : 20), "...")
+                                </td>
+                                <td>
+                                    @item.CreationDate.ToString("dd.MM.yyyy hh:mm")
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Czytaj</a>
+                                <td>
+                                    <form asp-action="Delete" asp-route-id="@item.Id">
+                                        <input type="submit" value="Usuń" class="btn btn-danger" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

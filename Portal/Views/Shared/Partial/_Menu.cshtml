@@ -1,0 +1,30 @@
+﻿@model Portal.Models.DtoModels.ParametersDto
+
+<nav role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" asp-controller="Home" asp-action="Index" class="brand-logo"><i class="material-icons large">access_alarms</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 1")).Value</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Blog" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 2")).Value</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Shop" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 3")).Value</a>
+            </li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+            <li>
+                <a asp-controller="Home" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 1")).Value</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Blog" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 2")).Value</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Sklep" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 3")).Value</a>
+            </li>
+        </ul>
+        <a data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>

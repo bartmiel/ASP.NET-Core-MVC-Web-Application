@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{2C3CEE93-6324-461C-AD08-233F6C066C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal", "Portal\Portal.csproj", "{56D273B2-5071-40A3-801A-29A5AAA4FA41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet", "Intranet\Intranet.csproj", "{4A7E4A44-92DF-450C-86DA-AAB334659E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C3CEE93-6324-461C-AD08-233F6C066C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3CEE93-6324-461C-AD08-233F6C066C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3CEE93-6324-461C-AD08-233F6C066C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3CEE93-6324-461C-AD08-233F6C066C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D273B2-5071-40A3-801A-29A5AAA4FA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D273B2-5071-40A3-801A-29A5AAA4FA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D273B2-5071-40A3-801A-29A5AAA4FA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D273B2-5071-40A3-801A-29A5AAA4FA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7E4A44-92DF-450C-86DA-AAB334659E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7E4A44-92DF-450C-86DA-AAB334659E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7E4A44-92DF-450C-86DA-AAB334659E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7E4A44-92DF-450C-86DA-AAB334659E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59645FE4-8011-492C-A70F-E0957DEB35FB}
+	EndGlobalSection
+EndGlobal

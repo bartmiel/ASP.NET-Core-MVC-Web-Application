@@ -1,0 +1,47 @@
+﻿@model Portal.Models.Shop.DataToCart
+@{
+    ViewData["Title"] = "Koszyk";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+<div class="container">
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th data-field="name">Nazwa</th>
+                    <th data-field="price">Cena</th>
+                    <th data-field="ilosc">Ilosc</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItem)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Shop" asp-action="Details" asp-route-id="@item.ProductId">@item.Product.Name</a>
+                        </td>
+                        @if (item.Product.Discount)
+                        {
+                            <td>
+                                <s>@item.Product.Price.ToString("c")</s>
+                                <p style="color: red;">@item.Product.DiscountPrice.ToString("c")</p>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                @item.Product.Price.ToString("c")
+                            </td>
+                        }
+                        <td>
+                            @item.Quantity
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            Do zapłaty: @Model.FinalPrice.ToString("c")
+        </div>
+    </div>
+</div>

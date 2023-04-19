@@ -1,0 +1,44 @@
+﻿@model Portal.Models.DtoModels.ParametersDto
+
+
+<div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+            <h5>
+                @Model.Parameters.Find(key => key.Key.Equals("Nazwa firmy")).Value
+            </h5>
+            <p class="white-text p-2">
+                @Model.Parameters.Find(key => key.Key.Equals("Opis stopka")).Value
+            </p>
+        </div>
+        <div class="col l3 s12">
+            <h5>@Model.Parameters.Find(key => key.Key.Equals("Menu footer")).Value</h5>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 1")).Value</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Blog" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 2")).Value</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Shop" asp-action="Index">@Model.Parameters.Find(key => key.Key.Equals("Menu link 3")).Value</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col l3 s12">
+            <h5>@Model.Parameters.Find(key =>key.Key.Equals("Kontakt stopka")).Value</h5>
+            <ul>
+                <li><i class="material-icons">home</i> ul. Pawia, 31-500 Kraków</li>
+                <li><i class="material-icons">phone</i> <a href="tel:+48535535535">+48 535 535 535</a></li>
+                <li><i class="material-icons">mail</i> <a href="mailto:biuro@chronotimex.pl">biuro@chronotimex.pl</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <span>Autor projektu: Bartłomiej Mielniczek</span>
+        </div>
+    </div>
+</div>

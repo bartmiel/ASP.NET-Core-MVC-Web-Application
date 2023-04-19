@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Data.Data.CMS.Blog>
+@{
+    ViewData["Title"] = "Blog";
+}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col s12 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="~/lib/img/blog/@item.Picture">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">@item.Title</span>
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a class="btn-large waves-effect waves-light" id="btn-blog" asp-controller="Blog"
+                           asp-action="Details" asp-route-id="@item.Id">Czytaj więcej</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿@model Data.Data.CMS.Blog
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+<div class="container">
+    <div class="section">
+        <div class="row blog-details-header">
+            <img src="~/lib/img/blog/@Model.Picture">
+        </div>
+        <div class="row">
+            @Html.Raw(Model.Contents)
+        </div>
+    </div>
+</div>

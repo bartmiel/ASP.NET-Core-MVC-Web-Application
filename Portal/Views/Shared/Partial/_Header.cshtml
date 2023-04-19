@@ -1,0 +1,29 @@
+﻿@model Portal.Models.DtoModels.ParametersDto
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+
+            @if (ViewData["Title"].Equals("Strona główna"))
+            {
+                <h1 id="main-text-company" class="header center">
+                    @Model.Parameters.Find(key => key.Key.Equals("Nazwa firmy")).Value
+                </h1>
+                <div class="row center">
+                    <h3 id="main-text" class="header col s12 light">@Html.Raw(Model.Parameters.Find(key => key.Key.Equals("Opis header")).Value)</h3>
+                </div>
+                <div class="row center">
+                    <a asp-controller="Blog" asp-action="Index" id="participantZone-button" class="btn-main-page btn-large waves-effect waves-light orange darken-2">@Model.Parameters.Find(key => key.Key.Equals("Napis na przycisku")).Value</a>
+                </div>
+                <div style="height: 50px;" class="parallax"><img src="~/lib/img/main/background1dark.jpg" alt="Unsplashed background img 1"></div>
+            }
+            else
+            {
+                <h1 id="main-title-text-other-page" class="header center">
+                    @ViewData["Title"]
+                </h1>
+            }
+        </div>
+    </div>
+    <div class="parallax"><img src="~/lib/img/main/background1dark.jpg" alt="Unsplashed background img 1"></div>
+</div>

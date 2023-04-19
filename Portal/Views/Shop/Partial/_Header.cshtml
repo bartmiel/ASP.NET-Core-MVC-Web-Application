@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Data.Data.Shop.SpecialOffer>
+
+<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+        <a asp-controller="Shop" asp-action="Index" asp-route-id="" class="btn-main-page btn-large waves-effect waves-light orange darken-2">Promocje</a>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="carousel-item white-text" href="#one!">
+            <img src="~/lib/img/shop/specialOffer/@item.PhotoLink">
+        </div>
+    }
+</div>
+<hr />

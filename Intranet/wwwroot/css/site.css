@@ -1,0 +1,12 @@
+.card-img-top {
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+.form-select {
+    width: 140px !important;
+}
+
+.parameter-form {
+    width: 500px;
+}

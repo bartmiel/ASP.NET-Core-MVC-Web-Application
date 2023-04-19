@@ -1,0 +1,62 @@
+﻿@model Portal.Models.DtoModels.ParametersDto
+
+<div class="section">
+    <div class="row center">
+        <div class="col s12">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h3> @Model.Parameters.Find(key => key.Key.Equals("Tytuł about us")).Value </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <div class="col s12 m6">
+                <div class="center">
+                    <i class="material-icons large orange-text text-darken-2">perm_data_setting</i>
+                    <h4 id="h4-about-us">
+                        @Model.Parameters.Find(key => key.Key.Equals("About us 1")).Value
+                    </h4>
+                </div>
+                <p>
+                    @Model.Parameters.Find(key => key.Key.Equals("About us opis 1")).Value
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="center">
+                <i class="material-icons large orange-text text-darken-2">high_quality</i>
+                <h4 id="h4-about-us">
+                    @Model.Parameters.Find(key => key.Key.Equals("About us 2")).Value
+                </h4>
+            </div>
+            <p class="start">
+                @Model.Parameters.Find(key => key.Key.Equals("About us opis 1")).Value
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <div class="col s12 m6">
+                <div class="center">
+                    <i class="material-icons large orange-text text-darken-2">trending_up</i>
+                    <h4 id="h4-about-us">
+                       @Model.Parameters.Find(key => key.Key.Equals("About us 3")).Value
+                    </h4>
+                </div>
+                <p>
+                    @Model.Parameters.Find(key => key.Key.Equals("About us opis 1")).Value
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="center">
+                <i class="material-icons large orange-text text-darken-22">format_align_justify</i>
+                <h4 id="h4-about-us">
+                    @Model.Parameters.Find(key => key.Key.Equals("About us 4")).Value
+                </h4>
+            </div>
+            <p>
+                @Model.Parameters.Find(key => key.Key.Equals("About us opis 1")).Value
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+﻿@model Data.Data.CMS.ContactForm
+
+@{
+    ViewData["Title"] = "Zawody -> Formularz kontaktowy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="pb-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col sm-12">
+                <h4 class="text-center pb-3">Tutaj sterujesz wyglądem formularza kontaktowego na stronie głównej</h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <form asp-action="Edit" class="col-sm-12">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="row justify-content-center">
+                    <div class="col-sm-5 mb-3">
+                        <label asp-for="Title" class="control-label"></label>
+                        <input asp-for="Title" class="form-control" placeholder="Tytuł nad formularzem" value="@Model.Title" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group form-check col-sm-4 mb-3">
+                        <label asp-for="Field1Label" class="control-label"></label>
+                        <input asp-for="Field1Label" type="text" class="form-control" placeholder="Pole 1" value="@Model.Field1Label">
+                        <span asp-validation-for="Field1Label" class="text-danger"></span>
+
+                        <label asp-for="Field1Type" class="control-label"></label>
+                        <select asp-for="Field1Type" class="form-select">
+                            Typ pola 1
+                            <option selected>Typ pola</option>
+                            <option value="text">tesktowe</option>
+                            <option value="email">e-mail</option>
+                            <option value="tel">telefon</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-check col-sm-4 mb-3">
+                        <label asp-for="Field2Label" class="control-label"></label>
+                            <input asp-for="Field2Label" type="text" class="form-control" placeholder="Pole 2" value="@Model.Field2Label">
+                        <span asp-validation-for="Field2Label" class="text-danger"></span>
+
+                        <label asp-for="Field2Type" class="control-label"></label>
+                        <select asp-for="Field2Type" class="form-select">
+                            Typ pola 2
+                            <option selected>Typ pola</option>
+                            <option value="text">tesktowe</option>
+                            <option value="email">e-mail</option>
+                            <option value="tel">telefon</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-check col-sm-4 mb-3">
+                        <label asp-for="Field3Label" class="control-label"></label>
+                            <input asp-for="Field3Label" type="text" class="form-control" placeholder="Pole 3" value="@Model.Field3Label">
+                        <span asp-validation-for="Field3Label" class="text-danger"></span>
+
+                        <label asp-for="Field3Type" class="control-label"></label>
+                        <select asp-for="Field3Type" class="form-select">
+                            Typ pola
+                            <option selected>Typ pola 3</option>
+                            <option value="text">tesktowe</option>
+                            <option value="email">e-mail</option>
+                            <option value="tel">telefon</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group form-check col-sm-12 mb-3">
+                        <label asp-for="Field4Label" class="control-label"></label>
+                            <input asp-for="Field4Label" type="text" class="form-control" placeholder="Pole 4" value="@Model.Field4Label">
+                        <span asp-validation-for="Field4Label" class="text-danger"></span>
+
+                        <label asp-for="Field4Type" class="control-label"></label>
+                        <select asp-for="Field4Type" class="form-select">
+                            Typ pola 4
+                            <option selected>Typ pola 4</option>
+                            <option value="text">tesktowe</option>
+                            <option value="email">e-mail</option>
+                            <option value="tel">telefon</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group form-check col-sm-12 mb-3">
+                        <label asp-for="Field5Label" class="control-label"></label>
+                        <textarea asp-for="Field5Label" class="form-control" rows="3" placeholder="Obszar tekstowy">@Model.Field5Label</textarea>
+                        <span asp-validation-for="Field5Label" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group form-check col-sm-4 mb-3">
+                        <label asp-for="SubmitButtonTitle" class="control-label"></label>
+                        <input asp-for="SubmitButtonTitle" type="text" class="form-control" placeholder="Przycisk potwierdzający" value="@Model.SubmitButtonTitle">
+                        <span asp-validation-for="SubmitButtonTitle" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Zapisz" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

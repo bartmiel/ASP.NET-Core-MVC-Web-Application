@@ -1,0 +1,27 @@
+﻿@model Portal.Models.DtoModels.ParametersDto
+
+<div class="section no-pad-bot count-section">
+    <div class="container">
+        <div class="row center">
+            <h1 class="col s12 orange-text text-darken-2 count-text-title-first-line"><b> @Model.Parameters.Find(key => key.Key.Equals("Nazwa firmy")).Value </b></h1><br />
+            <h3 class="count-text-title-second-line"> @Model.Parameters.Find(key => key.Key.Equals("Tytuł countera")).Value </h3>
+        </div>
+        <div class="row center">
+            <div class="col l4 m4 s12">
+                <h2 class="timer count-title count-number" data-to="417" data-speed="1500"></h2>
+                <i class="material-icons orange-text text-darken-2">child_care</i>
+                <h4 class="count-text">  @Html.Raw(Model.Parameters.Find(key => key.Key.Equals("Licznik 1")).Value) </h4>
+            </div>
+            <div class="col l4 m4 s12">
+                <h2 class="timer count-title count-number" data-to="150000" data-speed="1500"></h2>
+                <i class="material-icons orange-text text-darken-2">create</i>
+                <h4 class="count-text"> @Html.Raw(Model.Parameters.Find(key => key.Key.Equals("Licznik 2")).Value) </h4>
+            </div>
+            <div class="col l4 m4 s12">
+                <h2 class="timer count-title count-number" data-to="978" data-speed="1500"></h2>
+                <i class="material-icons orange-text text-darken-2">check</i>
+                <h4 class="count-text"> @Html.Raw(Model.Parameters.Find(key => key.Key.Equals("Licznik 3")).Value) </h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model Portal.Models.DtoModels.ContactFormDto
+
+<div class="container">
+    <div class="row center">
+        <h3>@Model.ContactForm.Title</h3>
+    </div>
+    <div class="row">
+        <form id="main_page_contact_form" asp-controller="Home" asp-action="SendMessage" method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <input asp-for="Message.Field1" id="field1" type="@Model.ContactForm.Field1Type" class="validate">
+                    <label for="field1">@Model.ContactForm.Field1Label</label>
+                </div>
+                <div class="input-field col s4">
+                    <input asp-for="Message.Field2" id="field2" type="@Model.ContactForm.Field2Type" class="validate">
+                    <label for="field2">@Model.ContactForm.Field2Label</label>
+                </div>
+                <div class="input-field col s4">
+                    <input asp-for="Message.Field3" id="field3" type="@Model.ContactForm.Field3Type" class="validate">
+                    <label for="field3">@Model.ContactForm.Field3Label</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input asp-for="Message.Field4" id="field4" type="@Model.ContactForm.Field4Type" class="validate">
+                    <label for="field4">@Model.ContactForm.Field4Label</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea asp-for="Message.Field5" id="field5" class="materialize-textarea validate" data-length="500" maxlength="500"></textarea>
+                    <label for="field5">Wiadomość</label>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="waves-effect waves-light btn-large btn-main-page orange darken-2">@Model.ContactForm.SubmitButtonTitle</button>
+            </div>
+        </form>
+    </div>
+</div>

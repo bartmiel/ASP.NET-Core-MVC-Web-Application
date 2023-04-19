@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Data.Data.Portal.Competition>
+@{
+    ViewData["Title"] = "Zapisy";
+}
+<div class="container p-2">
+<table class="table table-border table-striped" style="width: 100%">
+    <thead>
+        <tr>
+            <th>
+               Data
+            </th>
+            <th>
+                Miejsce
+            </th>
+            <th>
+                Nazwa
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var competition in Model)
+        {
+            <tr>
+                <td width="10%">
+                    <span class="orange-text text-darken-2">@competition.Date.ToString("dd-MM-yyyy")</span>
+                </td>
+                <td width="30%">
+                    @competition.City
+                </td>
+                <td width="40%">
+                    <span class="orange-text text-darken-2">@competition.Name</span>
+                </td>
+                <td width="10%">
+                    <a asp-controller="Category" asp-action="SignUp" asp-route-id="@competition.Id" class=""><i class="bi bi-pencil-square"></i>Zapisz się</a>
+                </td>
+                <td width="10%">
+                    <a asp-controller="Category" asp-action="Details" asp-route-id="@competition.Id" class=""><i class="bi bi-trash-fill"></i>Więcej</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,68 @@
+﻿@model Data.Data.CMS.Blog
+
+@{
+    ViewData["Title"] = "Blog -> Edytuj -> "+@Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
+
+<section class="pb-0">
+    <div class="container-fluid">
+        <div class="card mb-0">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Title" class="control-label"></label>
+                                <input asp-for="Title" class="form-control" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <input asp-for="Description" class="form-control" />
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Contents" class="control-label"></label>
+                                <textarea asp-for="Contents" id="htmlEditor" class="form-control"></textarea>
+                                <span asp-validation-for="Contents" class="text-danger"></span>
+                                <script>
+                                    var editor = new FroalaEditor('#htmlEditor', {
+                                        language: 'pl'
+                                    });
+                                </script>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Picture" class="control-label"></label>
+                                <input asp-for="Picture" class="form-control" />
+                                <span asp-validation-for="Picture" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Position" class="control-label"></label>
+                                <input asp-for="Position" class="form-control" />
+                                <span asp-validation-for="Position" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Zapisz" class="btn btn-primary" />
+                                <a asp-action="Index" class="btn btn-primary">Wróć</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+<script src='~/js/languages/pl.js'></script>
+
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

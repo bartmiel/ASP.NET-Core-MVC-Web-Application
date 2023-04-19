@@ -1,0 +1,52 @@
+﻿@model Data.Data.Shop.Product
+@{
+    ViewData["Title"] = "Sklep internetowy";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <p id="shop-bread-crumbs"><a asp-controller="Home" asp-action="Index">Chronotimex</a> > <a asp-action="Index">sklep internetowy</a> > <a asp-action="Index" asp-route-id="@Model.CattegoryId">@Model.Cattegory.Name.ToLower()</a> > @Model.Name.ToLower()</p>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <div class="carousel carousel-slider center">
+                    <div class="carousel-fixed-item center">
+                    </div>
+                    @foreach (var item in Model.Picture)
+                    {
+                        <div class="carousel-item white-text" href="#one!">
+                            <img src="~/lib/img/shop/@item.Link">
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col s6">
+                <h3>@Model.Name</h3>
+                <p>
+                    @Model.Description
+                </p>
+                <h4>
+                    @if (!Model.Discount)
+                    {
+                        <p>
+                            @Model.Price.ToString("c")
+                        </p>
+                    }
+                    else
+                    {
+                        <s>@Model.Price.ToString("c")</s>
+                        <p style="color: red;">
+                            @Model.DiscountPrice.ToString("c")
+                        </p>
+                    }
+                </h4>
+                <div class="row">
+                </div>
+                <a class="btn waves-effect waves-light" id="btn-add-cart" asp-controller="Cart"
+                   asp-action="AddToCart" asp-route-id="@Model.Id"><i class="material-icons">add_shopping_cart</i>Dodaj do koszyka</a>
+            </div>
+        </div>
+    </div>
+</div>

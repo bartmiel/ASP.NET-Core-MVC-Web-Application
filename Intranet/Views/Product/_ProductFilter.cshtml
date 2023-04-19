@@ -1,0 +1,55 @@
+﻿<div>
+    <a href="#" class="text-decoration-none" id="filters">
+        <div class="pl-2 card bg-primary">
+            <h5 class="text-light mt-1">
+                <i class="fa fa-caret-down fa-1 text-light mr-1 mt-1"></i>
+                <small>
+                    Filtry
+                </small>
+            </h5>
+        </div>
+    </a>
+</div>
+<div class="card" id="filters_content" style="display : none">
+    @using (Html.BeginForm("Index", "Product", FormMethod.Get))
+    {
+        <div class="card-body row">
+            <div class="col-3">
+                Rodzaj
+
+                @Html.DropDownList("filtry.PlatnikVat", new List<SelectListItem>
+               {
+                    new SelectListItem(){Text="",Value=""},
+                    new SelectListItem(){Text="z VAT",Value="true"},
+                    new SelectListItem(){Text="bez VAT",Value="false"}
+               }, new { @class = "form-select" })
+            </div>
+            <div class="col-3">
+                Podmiot
+
+                @Html.DropDownList("filtry.Zalezny", new List<SelectListItem>
+               {
+                    new SelectListItem(){Text="",Value=""},
+                    new SelectListItem(){Text="powiązani",Value="true"},
+                    new SelectListItem(){Text="niepowiązani",Value="false"}
+               }, new { @class = "form-select" })
+            </div>
+            <div class="col-3">
+                Obszar
+
+                @Html.DropDownList("filtry.Rodzaj", new List<SelectListItem>
+               {
+                    new SelectListItem(){Text="",Value=""},
+                    new SelectListItem(){Text="odbiorca",Value="odbiorca"},
+                    new SelectListItem(){Text="dostawca",Value="dostawca"}
+               }, new { @class = "form-select" })
+            </div>
+            <div class="col-12">
+                <div class="float-right">
+                    <a asp-action="Index" type="reset" class="btn btn-secondary"><i class="fa fa-times-circle text-muted"></i></a>
+                    <input type="submit" value="Filtruj" class=" btn btn-success text-light pl-4 pr-4" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
